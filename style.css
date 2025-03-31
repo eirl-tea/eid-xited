@@ -254,7 +254,7 @@ p {
 }
 
 #clicked:hover {
-    transform: translate(-80px, 4.2px);
+    transform: translateY(4.2px);
 }
 
 
@@ -409,9 +409,9 @@ p {
 }
 
 .leftClicked:hover {
-    transform: translate(3.438vw, 0.26vw);
+    transform: translateY(0.26vw);
 }
 
 .rightClicked:hover {
-    transform: translate(16.25vw, 0.26vw);
+    transform: translateY(0.26vw);
 }
