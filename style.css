@@ -409,9 +409,9 @@ p {
 }
 
 .leftClicked:hover {
-    transform: translate(66px, 5px);
+    transform: translate(3.438vw, 0.26vw);
 }
 
 .rightClicked:hover {
-    transform: translate(312px, 5px);
+    transform: translate(16.25vw, 0.26vw);
 }
