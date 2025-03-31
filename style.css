@@ -42,7 +42,7 @@ span {
     font-size: large;
     position: absolute;
     color: rgb(34, 121, 168);
-    top: 80%
+    top: 95%
 }
 
 /*package page*/
@@ -385,9 +385,9 @@ p {
 }
 
 .leftClicked:hover {
-    transform: translateY(0.26vw);
+    transform: translate(17vw, 0.26vw);
 }
 
 .rightClicked:hover {
-    transform: translateY(0.26vw);
+    transform: translate(80vw, 0.26vw);
 }
