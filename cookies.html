@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cookies.css">
+</head>
+<body>
+    <p class="wm">@eirl.tea</p>
+    <div class="guide" id="guide3">
+        <img src="images/guideL.png" class="guideL" id="guide3img">
+        <img src="images/rotii.gif" id="roti3">
+        <p id="guide3p">Hmm jajan... coba <span>usap/swipe <br>tutupnya ke atas 3 kali</span>, <br>kayaknya bakalan kebuka deh.</p>
+    </div>
+    <div class="guide" id="guide4">
+        <img src="images/guideS.png" class="guideL" id="guide4img">
+        <img src="images/rotii.gif" id="roti4">
+        <p id="guide4p">Yeaayy bisa dibukaa, <span>ketuk</span><br> cookiesnya buat dimakan yakk.</p>
+    </div>
+    <div class="guide" id="guide5">
+        <img src="images/guideS.png" class="guideL" id="guide5img">
+        <img src="images/rotii.gif" id="roti5">
+        <p id="guide5p">Uuu bintang apa itu? Coba <br> kamu <span>ketuk dan tahan</span></p>
+    </div>
+    <div class="cookies" id="cookies">
+        <div id="cookiestin">
+            <img src="images/lid.png" alt="lid" id="lid">
+            <div class="tin">
+                <img src="images/tinfront.png" alt="tinfront" id="tinfront">
+                <div class="bitten">
+                    <img src="images/bitten0.png" alt="" id="bitten0">
+                    <img src="images/bitten1.png" alt="" id="bitten1">
+                    <img src="images/bitten2.png" alt="" id="bitten2">
+                    <img src="images/bitten3.png" alt="" id="bitten3">
+                    <img src="images/bitten4.png" alt="" id="bitten4">
+                    <img src="images/bitten5.png" alt="" id="bitten5"> 
+                    <img src="images/bitten6.png" alt="" id="bitten6"> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const lid = document.getElementById('lid');
+        const guide3 = document.getElementById('guide3');
+        const guide4 = document.getElementById('guide4');
+        const guide5 = document.getElementById('guide5');
+        let touchStartY = 0;
+        let swipeCount = 0;
+
+        guide3.style.display = 'block';
+        guide4.style.display = 'none';
+        guide5.style.display = 'none';
+
+        lid.addEventListener('touchstart', (event) => {
+                touchStartY = event.touches[0].clientY;
+        });
+
+        lid.addEventListener('touchmove', (event) => {
+            const touchCurrentY = event.touches[0].clientY;
+            const touchDiffY = touchStartY - touchCurrentY;
+
+            if (touchDiffY > 150) { // Adjust sensitivity (50 pixels)
+                swipeCount++;
+                if (swipeCount === 1) {
+                    lid.style.transform = 'rotate(3deg) translateY(-0.5rem)';
+                } else if (swipeCount === 2) {
+                    lid.style.transform = 'rotate(-5deg) translateY(-2rem)';
+                } else if (swipeCount === 3) {
+                    lid.style.transform = 'translateY(-100px)';
+                    lid.style.opacity = '0';
+                    guide3.style.display = 'none';
+                    guide4.style.display = 'block';
+                }
+
+                touchStartY = event.touches[0].clientY;
+            }
+
+        });
+
+        lid.addEventListener('touchend', () => {
+        });
+
+        lid.addEventListener('touchcancel', () => {
+        });
+
+        const bitten0 = document.getElementById('bitten0');
+        const bitten1 = document.getElementById('bitten1');
+        const bitten2 = document.getElementById('bitten2');
+        const bitten3 = document.getElementById('bitten3');
+        const bitten4 = document.getElementById('bitten4');
+        const bitten5 = document.getElementById('bitten5');
+        let clickCount = 0;
+
+        window.addEventListener('click', () => {
+
+            if (lid.style.opacity === '0') {
+                clickCount++;
+                if (clickCount === 1) {
+                    bitten0.style.display = 'none';
+                } else if (clickCount === 2) {
+                    bitten1.style.display = 'none';
+                } else if (clickCount === 3) {
+                    bitten2.style.display = 'none';
+                } else if (clickCount === 4) {
+                    bitten3.style.display = 'none';
+                } else if (clickCount === 5) {
+                    bitten4.style.display = 'none';
+                } else if (clickCount === 6) {
+                    bitten5.style.display = 'none';
+                    guide4.style.display = 'none';
+                    guide5.style.display = 'block';
+                }
+            }
+        });
+
+        const cookies = document.getElementById('cookies');
+        let touchTimer;
+        
+        cookies.addEventListener('touchstart', () => {
+            if (bitten5.style.display === 'none') {
+                touchTimer = setTimeout(() => {
+                    window.location.href = "info.html";
+                }, 750);
+            }
+        });
+
+        cookies.addEventListener('touchend', () => {
+            clearTimeout(touchTimer);
+        });
+
+        cookies.addEventListener('touchcancel', () => {
+            clearTimeout(touchTimer);
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p class="wm">@eirl.tea</p>
+    <div class="background">
+        <div class="back">
+            <a href="index.html">
+                <img src="images/button.png" alt="back" id="unclicked">
+                <img src="images/home.png" alt="back clicked" id="clicked">
+            </a>
+        </div>
+        <div class="book">
+            <div id="id">
+                <img src="images/coverFront.png" alt="book" id="depan">
+                <img src="images/hal1.png" alt="book" id="hal1">
+                <img src="images/hal2.png" alt="book" id="hal2">
+                <img src="images/hal3.png" alt="book" id="hal3">
+                <img src="images/coverBack.png" alt="book" id="belakang">
+            </div>
+            <div id="en">
+                <img src="images/coverFront.png" alt="book" id="front">
+                <img src="images/page1.png" alt="book" id="page1">
+                <img src="images/page2.png" alt="book" id="page2">
+                <img src="images/page3.png" alt="book" id="page3">
+                <img src="images/page4.png" alt="book" id="page4">
+                <img src="images/coverBack.png" alt="book" id="back">
+            </div>
+        </div>
+        <div id="langButton">
+            <div id="langId">
+                <img src="images/idButton.png" id="idButton">
+                <img src="images/ok.png">
+            </div>
+            <div id="langEn">
+                <img src="images/enButton.png" id="enButton">
+                <img src="images/ok.png">
+            </div>
+        </div>
+        <div id="buttonsss">
+            <div id="prevButton">
+                <img src="images/arrowLeft.png" id="leftclicked" class="leftClicked">
+                <img src="images/button.png" id="leftunclicked" class="leftUnclicked">
+            </div>
+                <div id="ENprevButton">
+                    <img src="images/arrowLeft.png" id="ENleftclicked" class="leftClicked">
+                    <img src="images/button.png" id="ENleftunclicked" class="leftUnclicked">
+                </div>
+            <div id="nextButton">
+                <img src="images/arrowRight.png" id="rightclicked" class="rightClicked">
+                <img src="images/button.png" id="rightunclicked" class="rightUnclicked">
+            </div>
+            <div id="ENnextButton">
+                <img src="images/arrowRight.png" id="ENrightclicked" class="rightClicked">
+                <img src="images/button.png" id="ENrightunclicked" class="rightUnclicked">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const langId = document.getElementById('langId');
+const langEn = document.getElementById('langEn');
+const id = document.getElementById('id');
+const en = document.getElementById('en');
+const prevButton = document.getElementById('prevButton');
+const nextButton = document.getElementById('nextButton');
+const ENprevButton = document.getElementById('ENprevButton');
+const ENnextButton = document.getElementById('ENnextButton');
+
+if (langEn) langEn.style.filter = 'grayscale(100%)';
+if (id) id.style.display = 'block';
+if (en) en.style.display = 'none';
+if (prevButton) prevButton.style.display = 'block';
+if (nextButton) nextButton.style.display = 'block';
+if (ENprevButton) ENprevButton.style.display = 'none';
+if (ENnextButton) ENnextButton.style.display = 'none';
+
+if (langId) {
+    langId.addEventListener('click', () => {
+        if (langEn) langEn.style.filter = 'grayscale(100%)';
+        if (langId) langId.style.filter = 'grayscale(0%)';
+        if (id) id.style.display = 'block';
+        if (en) en.style.display = 'none';
+        if (prevButton) prevButton.style.display = 'block';
+        if (nextButton) nextButton.style.display = 'block';
+        if (ENprevButton) ENprevButton.style.display = 'none';
+        if (ENnextButton) ENnextButton.style.display = 'none';
+        showIndonesianBook();
+    });
+}
+
+if (langEn) {
+    langEn.addEventListener('click', () => {
+        if (langId) langId.style.filter = 'grayscale(100%)';
+        if (langEn) langEn.style.filter = 'grayscale(0%)';
+        if (en) en.style.display = 'block';
+        if (id) id.style.display = 'none';
+        if (prevButton) prevButton.style.display = 'none';
+        if (nextButton) nextButton.style.display = 'none';
+        if (ENprevButton) ENprevButton.style.display = 'block';
+        if (ENnextButton) ENnextButton.style.display = 'block';
+        showEnglishBook();
+    });
+}
+
+function showIndonesianBook() {
+    const pages = [
+        document.getElementById('depan'),
+        document.getElementById('hal1'),
+        document.getElementById('hal2'),
+        document.getElementById('hal3'),
+        document.getElementById('belakang')
+    ];
+    let currentPageIndex = 0;
+
+    function showPage(index) {
+        pages.forEach((page, i) => {
+            if (page) {
+                if (i === index) {
+                    page.style.display = 'block';
+                    setTimeout(() => {
+                        if (page) page.style.opacity = 1;
+                    }, 10);
+                } else {
+                    page.style.opacity = 0;
+                    setTimeout(() => {
+                        if (page) page.style.display = 'none';
+                    }, 500);
+                }
+            }
+        });
+    }
+
+    if (nextButton) {
+        nextButton.addEventListener('click', () => {
+            if (currentPageIndex < pages.length - 1) {
+                currentPageIndex++;
+                showPage(currentPageIndex);
+            }
+        });
+    }
+
+    if (prevButton) {
+        prevButton.addEventListener('click', () => {
+            if (currentPageIndex > 0) {
+                currentPageIndex--;
+                showPage(currentPageIndex);
+            }
+        });
+    }
+
+    showPage(currentPageIndex);
+}
+
+function showEnglishBook() {
+    const pages = [
+        document.getElementById('front'),
+        document.getElementById('page1'),
+        document.getElementById('page2'),
+        document.getElementById('page3'),
+        document.getElementById('page4'),
+        document.getElementById('back')
+    ];
+    let currentPageIndex = 0;
+
+    function showPage(index) {
+        pages.forEach((page, i) => {
+            if (page) {
+                if (i === index) {
+                    page.style.display = 'block';
+                    setTimeout(() => {
+                        if (page) page.style.opacity = 1;
+                    }, 10);
+                } else {
+                    page.style.opacity = 0;
+                    setTimeout(() => {
+                        if (page) page.style.display = 'none';
+                    }, 500);
+                }
+            }
+        });
+    }
+
+    if (ENnextButton) {
+        ENnextButton.addEventListener('click', () => {
+            if (currentPageIndex < pages.length - 1) {
+                currentPageIndex++;
+                showPage(currentPageIndex);
+            }
+        });
+    }
+
+    if (ENprevButton) {
+        ENprevButton.addEventListener('click', () => {
+            if (currentPageIndex > 0) {
+                currentPageIndex--;
+                showPage(currentPageIndex);
+            }
+        });
+    }
+
+    showPage(currentPageIndex);
+}
+
+showIndonesianBook();
+
+    </script>
+</body>
+</html>

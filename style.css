@@ -1,0 +1,416 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
+
+@font-face {
+    font-family: "handwritten";
+    src: url(handwritten.otf);
+  }
+
+body {
+    padding: 0;
+    margin: 0;
+    background-size: 2.5rem 2.5rem;
+    background-image:
+    -webkit-linear-gradient(0deg,rgba(255, 255, 255, 0.27) 50%,transparent 50%),
+    -webkit-linear-gradient(rgba(255, 255, 255, 0.2) 50%,transparent 50%);
+    background-color:#6acdf4;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 62vh;
+}
+
+/*@keyframes changingBg {
+    0% {background-color: #78d1f7;}
+    50% {background-color: #63b6fa;}
+    100% {background-color: #59301b;}
+}*/
+
+div {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+span {
+    color:#f54a88;
+}
+
+.wm {
+    z-index: 1200;
+    font-family: "handwritten";
+    font-size: large;
+    position: absolute;
+    color: rgb(34, 121, 168);
+    transform: translate(25vh, 90vh);
+    top: 20%;
+}
+
+/*package page*/
+.guide {
+    z-index: 999;
+    position: absolute;
+    transform: translate(0px, -290px);
+    animation: appearIn 1s ease-out;
+}
+
+
+@keyframes appearIn {
+    from {
+        transform: translate(0px, -500px);
+    }
+
+    to {
+        transform: translate(0px, -290px);
+    }
+}
+
+.guide p {
+    font-family: Quicksand, sans-serif;
+    font-weight: 600;
+    width: 16rem;
+}
+
+#guide1p {
+    transform: translateX(35px);
+}
+
+#guide2p {
+    transform: translate(38px, 311px);
+}
+
+#guide3p {
+    transform: translate(320px, 8px);
+}
+
+#guide3img {
+    transform: translate(277px, 311px);
+}
+
+.guide img {
+    position: absolute;
+}
+
+.rotiS {
+    width: 80px;
+    transform: translate(-135px, -5px);
+}
+
+.rotiL {
+    width: 80px;
+    transform: translate(-42px, 318px);
+}
+
+#roti3 {
+    width: 80px;
+    transform: translate(150px, 11px);
+}
+
+.guideS {
+    transform: translateY(312px);
+    width: 385px;
+}
+
+.guideL {
+    transform: translate(-65px, 287px);
+    width: 385px;
+}
+
+.okButton img {
+    width: 100px;
+    transform: translate(15px, 5px);
+    z-index: 1001;
+}
+
+#ok:hover {
+    transform: translate(15px, 9px);
+}
+
+#package {
+    z-index: 1000;
+    position: relative;
+    width: 20rem;
+    cursor: pointer;
+    transition: transform 0.3s cubic-bezier(0.32, 0.885, 0.1, 1.5);
+    filter: drop-shadow(0.1rem 0.7rem 1rem rgba(0, 0, 0, 0.5));
+}
+
+#package:hover {
+    transform: scale(1.2);
+}
+
+#rI {
+    position: relative;
+    animation: bounce 0.75s cubic-bezier(0.32, 0.885, 0.1, 1.5);
+}
+
+@keyframes bounce { 
+    from {
+        transform: scale(1.3, 1.3);
+    }
+    
+    to {
+        transform: scale(1, 1);
+    }
+}
+
+#rI img {
+    position: absolute;
+}
+
+.letter {
+    left: 5px;
+    right: 100px;
+}
+
+.letter img {
+    width: 336px;
+}
+
+.title {
+    transform: translate(122px,-167px);
+}
+
+#bubble {
+    transform: translate(-5px,80px);
+}
+
+p {
+    font-family: "handwritten";
+    z-index: 10;
+    width: 16.5rem;
+    font-size: 15px;
+    transform: translateY(29px);
+    color: #59301b;
+
+}
+
+.nextButton img {
+    width: 3.5rem;
+    position: absolute;
+    transform: translate(-9px, 185px);
+}
+
+#next {
+    z-index: 2;
+}
+
+#next2 {
+    z-index: 0;
+}
+
+#next:hover {
+    transform: translate(-9px, 190px);
+}
+
+.nextBubble {
+    position: relative;
+    transform: translate(-40px, -602px);
+}
+
+.nextBubble img {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#words2 {
+    transform: translate(45px, 167px);
+}
+
+#whatButton img {
+    transform: translate(20vw, -52vw);
+    width: 6rem;
+    padding: 20px;
+}
+
+#bubble2 {
+    width: 336px;
+}
+
+#what:hover {
+    transform: translate(20vw,-51vw);
+}
+
+#unclicked {
+    position: absolute;
+    width: 3.5rem;
+    align-items: end;
+    top: 0.9rem;
+    right: 1.3rem;
+    transform: translate(-32vw, 0px);
+}
+
+#clicked {
+    position: absolute;
+    width: 3.5rem;
+    align-items: end;
+    top: 0.9rem;
+    right: 1.3rem;
+    z-index: 2;
+    transform: translate(-32vw, 0px);
+}
+
+#clicked:hover {
+    transform: translate(-80px, 4.2px);
+}
+
+
+
+/*info page*/
+.book {
+    position: relative;
+    top: 20%;
+    right: 52%;
+}
+
+.book img {
+    position: absolute;
+    width: 30rem;
+    height: auto;
+}
+
+#depan {
+    z-index: 5;
+}
+
+#hal1 {
+    z-index: 4;
+}
+
+#hal2 {
+    z-index: 3;
+}
+
+#hal3 {
+    z-index: 2;
+}
+
+#belakang {
+    z-index: 1;
+}
+
+#front {
+    z-index: 5;
+}
+
+#page1 {
+    z-index: 4;
+}
+
+#page2 {
+    z-index: 3;
+}
+
+#page3 {
+    z-index: 2;
+}
+
+#page4 {
+    z-index: 1;
+}
+
+#back {
+    z-index: 0;
+}
+
+#langButton {
+    position: relative;
+    left: 7%;
+}
+
+#langButton img {
+    position: absolute;
+    width: 9rem;
+}
+
+#langButton div {
+    position: relative;
+}
+
+#langId {
+    bottom: 44%;
+    transform: translateX(22vw);
+}
+
+#langEn {
+    bottom: 44%;
+    transform: translateX(38vw);
+    padding: 10px;
+}
+
+#front {
+    z-index: 1000;
+}
+
+#idButton {
+    z-index: 5;
+}
+
+#enButton {
+    z-index: 5;
+}
+
+#idButton:hover {
+    transform: translateY(5px);
+}
+
+#enButton:hover {
+    transform: translateY(5px);
+}
+
+#buttonsss div {
+    position: relative;
+}
+
+.leftClicked {
+    position: absolute;
+    width: 3.5rem;
+    align-items: end;
+    top: 1.3rem;
+    right: 1.3rem;
+    z-index: 2;
+    transform: translateX(17vw);
+}
+
+.leftUnclicked {
+    position: absolute;
+    width: 3.5rem;
+    align-items: end;
+    top: 1.3rem;
+    right: 1.3rem;
+    transform: translateX(17vw);
+}
+
+.rightClicked {
+    position: absolute;
+    width: 3.5rem;
+    align-items: end;
+    top: 1.3rem;
+    right: 1.3rem;
+    z-index: 2;
+    transform: translateX(80vw);
+}
+
+.rightUnclicked {
+    position: absolute;
+    width: 3.5rem;
+    align-items: end;
+    top: 1.3rem;
+    right: 1.3rem;
+    transform: translateX(80vw);
+}
+
+#buttonsss {
+    top: 85%;
+    right: 28%;
+}
+
+.leftClicked:hover {
+    transform: translate(39px, 5px);
+}
+
+.rightClicked:hover {
+    transform: translate(273px, 5px);
+}
