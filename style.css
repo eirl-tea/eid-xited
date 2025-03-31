@@ -405,13 +405,13 @@ p {
 
 #buttonsss {
     top: 85%;
-    right: 28%;
+    right: 50%;
 }
 
 .leftClicked:hover {
-    transform: translate(39px, 5px);
+    transform: translate(66px, 5px);
 }
 
 .rightClicked:hover {
-    transform: translate(273px, 5px);
+    transform: translate(312px, 5px);
 }
