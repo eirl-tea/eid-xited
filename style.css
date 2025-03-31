@@ -234,29 +234,6 @@ p {
     transform: translate(20vw,-51vw);
 }
 
-#unclicked {
-    position: absolute;
-    width: 3.5rem;
-    align-items: end;
-    top: 0.9rem;
-    right: 1.3rem;
-    transform: translate(-32vw, 0px);
-}
-
-#clicked {
-    position: absolute;
-    width: 3.5rem;
-    align-items: end;
-    top: 0.9rem;
-    right: 1.3rem;
-    z-index: 2;
-    transform: translate(-32vw, 0px);
-}
-
-#clicked:hover {
-    transform: translateY(4.2px);
-}
-
 
 
 /*info page*/
