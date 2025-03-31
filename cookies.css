@@ -6,7 +6,6 @@
   }
 
 body {
-    position: relative;
     padding: 0;
     margin: 0;
     background-size: 2.5rem 2.5rem;
@@ -17,12 +16,6 @@ body {
     overflow-x: hidden;
     overflow-y: hidden;
 }
-
-/*@keyframes changingBg {
-    0% {background-color: #78d1f7;}
-    50% {background-color: #63b6fa;}
-    100% {background-color: #59301b;}
-}*/
 
 div {
     position: relative;
@@ -42,14 +35,15 @@ span {
     font-size: large;
     position: absolute;
     color: rgb(34, 121, 168);
-    transform: translate(25vh, 90vh);
+    top: 80%;
+    right: 40%;
 }
 
 /*package page*/
 .guide {
     z-index: 999;
     position: absolute;
-    transform: translate(0px, -290px);
+    transform: translateY(-0.26vw);
     animation: appearIn 1s ease-out;
 }
 
@@ -59,18 +53,27 @@ span {
     }
 
     to {
-        transform: translateY(-290px);
+        transform: translateY(-300px);
     }
 }
 
 #guide3 {
-    transform: translate(0px, -290px);
+    transform: translate(0px, -300px);
+}
+
+#guide4 {
+    transform: translate(0px, -300px);
+}
+
+#guide5 {
+    transform: translate(0px, -300px);
 }
 
 .guide p {
     font-family: 'Quicksand', sans-serif;
     font-weight: 600;
     color: #59301b;
+    font-size: 0.9rem;
 }
 
 .guide img {
@@ -83,7 +86,7 @@ span {
 }
 
 #guide3p {
-    transform: translate(110px, 332px);
+    transform: translate(110px, 335px);
 }
 
 #guide3img {
@@ -101,7 +104,7 @@ span {
 }
 
 #guide4p {
-    transform: translate(110px, 333px);
+    transform: translate(110px, 335px);
 }
 
 #guide4img {
@@ -114,7 +117,7 @@ span {
 }
 
 #guide5p {
-    transform: translate(110px, 332px);
+    transform: translate(110px, 335px);
 }
 
 #guide5img {
@@ -125,7 +128,6 @@ span {
 .cookies {
     position: relative;
     z-index: 1003;
-    /*transform: translateY(-20px);*/
 }
 
 .cookies img{
