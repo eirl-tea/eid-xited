@@ -343,7 +343,7 @@ p {
     top: 1.3rem;
     right: 1.3rem;
     z-index: 2;
-    transform: translateX(17vw);
+    transform: translateX(40vw);
 }
 
 .leftUnclicked {
@@ -352,7 +352,7 @@ p {
     align-items: end;
     top: 1.3rem;
     right: 1.3rem;
-    transform: translateX(17vw);
+    transform: translateX(40vw);
 }
 
 .rightClicked {
@@ -375,8 +375,8 @@ p {
 }
 
 #buttonsss {
-    top: 80%;
-    right: 30%;
+    top: 85%;
+    right: 50%;
 }
 
 .leftClicked:hover {
