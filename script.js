@@ -52,4 +52,8 @@ const infopage = document.getElementById('infopage');
 
 infopage.style.display = 'none';
 
-
+        if (packageImg) {
+            packageImg.addEventListener('contextmenu', (event) => {
+                event.preventDefault();
+            });
+        }
