@@ -36,7 +36,7 @@ span {
     position: absolute;
     color: rgb(34, 121, 168);
     transform: translate(25vh, 90vh);
-    top: 0%;
+    bottom: 30%;
     right: 32%;
 }
 
@@ -343,7 +343,7 @@ p {
     top: 1.3rem;
     right: 1.3rem;
     z-index: 2;
-    transform: translateX(55vw);
+    transform: translateX(65vw);
 }
 
 .leftUnclicked {
@@ -352,7 +352,7 @@ p {
     align-items: end;
     top: 1.3rem;
     right: 1.3rem;
-    transform: translateX(55vw);
+    transform: translateX(65vw);
 }
 
 .rightClicked {
