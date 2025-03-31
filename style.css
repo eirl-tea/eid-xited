@@ -8,13 +8,14 @@
 body {
     padding: 0;
     margin: 0;
-    background-size: 0.25rem, 0.25rem;
+    background-size: 0.25rem 0.25rem;
     background-image:
     -webkit-linear-gradient(0deg,rgba(255, 255, 255, 0.27) 50%,transparent 50%),
     -webkit-linear-gradient(rgba(255, 255, 255, 0.2) 50%,transparent 50%);
     background-color:#6acdf4;
     overflow-x: hidden;
     overflow-y: hidden;
+    max-width: 600px;
 }
 
 
