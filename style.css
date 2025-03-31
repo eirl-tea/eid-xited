@@ -29,6 +29,7 @@ div {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    overflow: hidden;
 }
 
 span {
@@ -41,7 +42,7 @@ span {
     font-size: large;
     position: absolute;
     color: rgb(34, 121, 168);
-    transform: translate(25vh, 90vh);
+    top: 80%
 }
 
 /*package page*/
@@ -238,7 +239,7 @@ p {
 .book {
     position: relative;
     top: 20%;
-    right: 35%;
+    right: 30%;
 }
 
 .book img {
@@ -380,7 +381,7 @@ p {
 
 #buttonsss {
     top: 85%;
-    right: 20%;
+    right: 15%;
 }
 
 .leftClicked:hover {
