@@ -238,7 +238,7 @@ p {
 .book {
     position: relative;
     top: 20%;
-    right: 52%;
+    right: 35%;
 }
 
 .book img {
@@ -380,7 +380,7 @@ p {
 
 #buttonsss {
     top: 85%;
-    right: 50%;
+    right: 20%;
 }
 
 .leftClicked:hover {
